@@ -1,0 +1,472 @@
+
+/* CONFIGURACIÓN GENERAL */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #ffffff;
+    color: #333333;
+}
+
+/* HEADER */
+#header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 12px 5%;
+    background-color: #222222;
+}
+
+#logo {
+    display: block;
+    width: 100px;
+    max-width: 100%;
+    max-height: 65px;
+    height: auto;
+    object-fit: contain;
+    object-position: left center;
+}
+
+/* MENÚ DE NAVEGACIÓN */
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px 0;
+}
+
+/* Menú hamburguesa, oculto en ordenador */
+#menu-toggle {
+    display: none;
+}
+
+#menu-icon {
+    display: none;
+    color: #ffffff;
+    font-size: 30px;
+    cursor: pointer;
+    padding: 5px;
+}
+
+/* CONTENIDO PRINCIPAL */
+#main {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 30px 20px;
+    flex: 1;
+    min-width: 0;
+}
+
+h1 {
+    color: rgb(113, 143, 14);
+    text-align: center;
+    font-size: clamp(24px, 4vw, 36px);
+}
+
+h2 {
+    color: rgb(113, 143, 14);
+    font-size: clamp(20px, 3vw, 26px);
+}
+
+p {
+    font-size: 14px;
+    line-height: 1.8;
+    overflow-wrap: anywhere;
+}
+
+/* SECCIONES */
+section {
+    width: 100%;
+    min-width: 0;
+    margin: 0 0 25px;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+}
+
+/* FOOTER */
+#footer {
+    width: 100%;
+    margin-top: auto;
+    padding: 15px 20px;
+    background-color: #222222;
+    color: #ffffff;
+    text-align: center;
+}
+
+#footer p {
+    margin: 8px;
+}
+
+#footer a {
+    color: rgb(188, 232, 43);
+    text-decoration: underline;
+}
+
+/* MONSTRUO DIBUJADO CON CSS */
+.monster-section {
+    text-align: center;
+    overflow: hidden;
+}
+
+.monster {
+    position: relative;
+    width: 220px;
+    max-width: 100%;
+    height: 280px;
+    max-width: 100%;
+    margin: 25px auto;
+    flex-shrink: 0;
+    transform: none;
+}
+
+.monster-head {
+    position: absolute;
+    top: 35px;
+    left: 45px;
+    width: 130px;
+    height: 105px;
+    background-color: #4b08dc;
+    border: 4px solid #315b20;
+    border-radius: 45% 45% 40% 40%;
+    z-index: 2;
+}
+
+.horn {
+    position: absolute;
+    top: 15px;
+    width: 30px;
+    height: 40px;
+    background-color: #e8e8e8;
+    border: 3px solid #315b20;
+    border-radius: 50% 50% 10% 10%;
+    z-index: 1;
+}
+
+.horn-left {
+    left: 55px;
+    transform: rotate(-25deg);
+}
+
+.horn-right {
+    right: 55px;
+    transform: rotate(25deg);
+}
+
+.eye {
+    position: absolute;
+    top: 28px;
+    width: 27px;
+    height: 32px;
+    background-color: #ffffff;
+    border: 2px solid #315b20;
+    border-radius: 50%;
+}
+
+.eye-left {
+    left: 20px;
+}
+
+.eye-right {
+    right: 20px;
+}
+
+.eye::after {
+    content: "";
+    position: absolute;
+    top: 9px;
+    left: 8px;
+    width: 8px;
+    height: 12px;
+    background-color: #222222;
+    border-radius: 50%;
+}
+
+.mouth {
+    position: absolute;
+    left: 29px;
+    bottom: 12px;
+    width: 64px;
+    height: 23px;
+    background-color: #702c36;
+    border: 2px solid #315b20;
+    border-radius: 5px 5px 50% 50%;
+    overflow: hidden;
+}
+
+.tooth {
+    width: 15px;
+    height: 10px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    border-radius: 0 0 4px 4px;
+}
+
+.monster-body {
+    position: absolute;
+    top: 132px;
+    left: 65px;
+    width: 90px;
+    height: 75px;
+    background-color: #f0820d;
+    border: 4px solid #315b20;
+    border-radius: 35% 35% 25% 25%;
+}
+
+.arm {
+    position: absolute;
+    top: 145px;
+    width: 40px;
+    height: 60px;
+    background-color: #f0820d;
+    border: 4px solid #315b20;
+    border-radius: 50px;
+}
+
+.arm-left {
+    left: 30px;
+    transform: rotate(25deg);
+}
+
+.arm-right {
+    right: 30px;
+    transform: rotate(-25deg);
+}
+
+.leg {
+    position: absolute;
+    top: 195px;
+    width: 30px;
+    height: 80px;
+    background-color: #f0820d;
+    border: 4px solid #315b20;
+    border-radius: 10px 10px 15px 15px;
+}
+
+.leg-left {
+    left: 75px;
+}
+
+.leg-right {
+    right: 75px;
+}
+
+/* CAPÍTULOS EN DOS COLUMNAS */
+.chapters {
+    display: flex;
+    gap: 18px;
+    align-items: stretch;
+    margin: 25px 0;
+    width: 100%;
+    min-width: 0;
+}
+
+.chapter {
+    flex: 1 1 0;
+    min-width: 0;
+    margin: 0;
+    padding: 20px;
+    overflow-wrap: anywhere;
+}
+
+/* FORMULARIO */
+.contact-form {
+    width: 100%;
+    min-width: 0;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+    min-width: 0;
+}
+
+.form-group label {
+    font-weight: bold;
+    text-align: left;
+}
+
+.form-group input,
+.form-group textarea {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    padding: 12px;
+    border: 1px solid #aaaaaa;
+    border-radius: 5px;
+    font: inherit;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.form-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.form-buttons button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #526b08;
+    color: #ffffff;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.form-buttons button:hover {
+    background-color: #718f0e;
+}
+
+/* TABLETS Y MÓVILES */
+@media (max-width: 576px) {
+
+    /* Menú hamburguesa */
+    #header {
+        padding: 12px 16px;
+        gap: 8px;
+    }
+
+    #menu-icon {
+        display: block;
+        margin-left: auto;
+    }
+
+    #menu {
+        display: none;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 8px;
+        width: 100%;
+        padding: 12px;
+        background-color: #1e1e1e;
+    }
+
+    #menu-toggle:checked ~ #menu {
+        display: flex;
+    }
+
+    #menu a {
+        display: block;
+        padding: 10px;
+    }
+
+    /* Contenido */
+    #main {
+        padding: 24px 16px;
+    }
+
+    .chapters {
+        flex-direction: column;
+        gap: 15px;
+        margin: 20px 0;
+    }
+
+    .chapter {
+        width: 100%;
+        padding: 16px;
+    }
+
+    /* Modo oscuro */
+    body {
+        background-color: #121212;
+        color: #f5f5f5;
+    }
+
+    #header,
+    #main,
+    #footer {
+        background-color: #1e1e1e;
+        color: #f5f5f5;
+    }
+
+    h1,
+    h2,
+    h3,
+    p,
+    label {
+        color: #f5f5f5;
+    }
+
+    section,
+    .chapter,
+    .contact-form,
+    .monster-section {
+        background-color: #1e1e1e;
+        color: #f5f5f5;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        background-color: #2b2b2b;
+        color: #ffffff;
+        border-color: #777777;
+    }
+
+    .form-group input::placeholder,
+    .form-group textarea::placeholder {
+        color: #cccccc;
+        opacity: 1;
+    }
+
+    .form-buttons button {
+        color: #ffffff;
+    }
+}
+
+@media (max-width: 320px) {
+    .monster {
+        width: 220px;
+        height: 280px;
+        max-width: none;
+        transform: scale(0.85);
+        transform-origin: top center;
+        margin: 20px auto -20px;
+    }
+
+    .monster-section {
+        overflow: hidden;
+    }
+}
+
+@media (max-width: 250px) {
+    .monster {
+        transform: scale(0.70);
+        margin-bottom: -60px;
+    }
+}
