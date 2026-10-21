@@ -518,3 +518,17 @@ section {
     object-fit: contain;
     border-radius: 10px;
 }
+
+
+@keyframes monster-shake {
+    0%   { transform: translate(0, 0) rotate(0deg); }
+    25%  { transform: translate(-2px, 1px) rotate(-1deg); }
+    50%  { transform: translate(2px, -1px) rotate(1deg); }
+    75%  { transform: translate(-2px, -1px) rotate(-1deg); }
+    100% { transform: translate(0, 0) rotate(0deg); }
+}
+
+.monster-shaking {
+    animation: monster-shake 0.5s ease-in-out;
+}
+

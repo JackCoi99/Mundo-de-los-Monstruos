@@ -1,9 +1,13 @@
 
 const mouth = document.querySelector(".mouth");
 const tooth = document.querySelector(".tooth");
-const monsterButton = document.getElementById("monster-button");
 const monster = document.querySelector(".monster");
+const monsterButton = document.getElementById("monster-button");
 const monsterTalk = document.getElementById("monster-talk")
+const friendsButton = document.getElementById("monster-friend");
+const friendsPopup = document.getElementById("friends-popup");
+const monsterMove = document.getElementById("monster-move");
+
 
 mouth.addEventListener("click", function() {
     mouth.classList.toggle("mouth-closed");
@@ -22,9 +26,6 @@ monsterTalk.addEventListener("click", function() {
 })
 
 
-const friendsButton = document.getElementById("monster-friend");
-const friendsPopup = document.getElementById("friends-popup");
-
 friendsButton.addEventListener("click", function() {
     friendsPopup.style.display = "flex";
 });
@@ -35,4 +36,10 @@ friendsPopup.addEventListener("click", function(event) {
     }
 });
 
+monsterMove.addEventListener("click", function(event) {
+    monster.classList.remove("monster-shaking");
 
+    void monster.offsetWidth;
+
+    monster.classList.add("monster-shaking");
+});
