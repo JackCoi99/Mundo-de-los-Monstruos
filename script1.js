@@ -21,13 +21,6 @@ monsterTalk.addEventListener("click", function() {
     alert("Augh! Que te asuste!");
 })
 
-const monsterFriends = document.getElementById("monster-friend");
-const amigos = document.getElementById("amigos");
-
-monsterFriends.addEventListener("click", function() {
-    amigos.style.display = "block";
-});
-
 
 const friendsButton = document.getElementById("monster-friend");
 const friendsPopup = document.getElementById("friends-popup");
